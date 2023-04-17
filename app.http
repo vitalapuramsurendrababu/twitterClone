@@ -1,0 +1,74 @@
+
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+
+###login//
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+
+//recent tweets
+###
+
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+
+###user following
+GET http://localhost:3000/user/following/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+
+###user followers
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+###tweets info
+
+GET http://localhost:3000/tweets/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+
+//tweet likes persons
+
+###
+GET http://localhost:3000/tweets/5/likes/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+
+/tweet replies
+
+###
+GET http://localhost:3000/tweets/2/replies/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+
+//user tweets
+###
+GET http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+###
+
+POST http://localhost:3000/user/tweets/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
+
+{
+   "tweet": "hello"
+}
+
+###
+DELETE http://localhost:3000/tweets/16/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Sm9lQmlkZW4.FKJlrcunezKjz3nSaTA88U8XLBhDaWe-Gd0Ujc0jj04
